@@ -24,12 +24,17 @@
         </div>
         <div class="q-mt-md full-width row inline  justify-center items-center content-center">
           <div class="col-auto">
-            <q-btn class="q-mr-lg" unelevated color="accent" icon="star" />
+            <q-btn class="q-mr-lg" unelevated color="info" icon="star" />
           </div>
           <div class="col-auto">
-            <q-btn style="width: 150px" unelevated color="primary" label="Predict" no-caps />
+            <q-btn @click="predict" style="width: 150px" unelevated color="primary" label="Predict" no-caps />
           </div>
         </div>
+        <transition name="fade">
+          <div v-if="showPredict">
+            <predict-result></predict-result>
+          </div>
+        </transition>
       </q-card-section>
       <q-separator />
       <div class="text-center">
@@ -41,11 +46,30 @@
 </template>
 
 <script>
+  import PredictResult from '@/components/predict-result'
+
   export default {
-    name: "featured-match"
+    name: "featured-match",
+    components: { PredictResult },
+    data() {
+      return {
+        showPredict: false
+      }
+    },
+    methods: {
+      predict() {
+        this.showPredict = !this.showPredict
+      }
+    }
   }
 </script>
 
 <style scoped>
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
 
 </style>

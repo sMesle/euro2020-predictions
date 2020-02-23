@@ -1,6 +1,6 @@
 <template>
     <q-toolbar class="toolbar bg-white" style="height: 60px;">
-        <q-tabs narrow-indicator active-color="black" class="text-grey" switch-indicator indicator-color="purple"
+        <q-tabs narrow-indicator active-color="black" class="text-grey" switch-indicator indicator-color="primary"
                 v-model="tab" stretch shrink no-caps >
           <q-tab name="Matches" label="Matches"/>
           <q-tab name="Results" label="Results"/>
