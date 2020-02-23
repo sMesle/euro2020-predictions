@@ -1,4 +1,4 @@
-# quasar-again
+# EURO 2020 - Predictions Web app
 
 ## Project setup
 ```
