@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <nav-bar></nav-bar>
+    <div class="q-ma-lg row">
+      <div class="col-12">
+        <featured-match></featured-match>
+      </div>
+    </div>
+    <div class="desktop-only q-ma-lg row">
+      <div class="col-2">
+        <group-list></group-list>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from '@/components/nav-bar'
+import FeaturedMatch from '@/components/featured-match'
+import GroupList from "@/components/group-list";
 
 export default {
-  name: 'App',
+  name: 'LayoutDefault',
+
   components: {
-    HelloWorld
+    GroupList,
+    NavBar,
+    FeaturedMatch
+  },
+
+  data () {
+    return {
+      leftDrawerOpen: false
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
