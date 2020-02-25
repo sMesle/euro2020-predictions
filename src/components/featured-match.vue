@@ -24,7 +24,7 @@
         </div>
         <div class="q-mt-md full-width row inline  justify-center items-center content-center">
           <div class="col-auto">
-            <q-btn class="q-mr-lg" unelevated color="info" icon="star" />
+            <q-btn class="q-mr-lg" unelevated color="info" icon="fas fa-star" />
           </div>
           <div class="col-auto">
             <q-btn @click="predict" style="width: 150px" unelevated color="primary" label="Predict" no-caps />

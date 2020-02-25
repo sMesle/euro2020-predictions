@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav-bar></nav-bar>
+    <nav-bar :isAuthenticated="isAuthenticated" :picture="picture" :name="name"></nav-bar>
     <div class="q-ma-lg row">
       <div class="col-12">
         <featured-match></featured-match>
@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import { Auth, Hub } from 'aws-amplify'
+import { mapState, mapGetters } from "vuex";
 import NavBar from '@/components/nav-bar'
 import FeaturedMatch from '@/components/featured-match'
 import GroupList from "@/components/group-list";
@@ -42,6 +44,36 @@ export default {
     return {
       leftDrawerOpen: false
     }
+  },
+  computed: {
+    ...mapState({
+      user: state => state.profile.user
+    }),
+    ...mapGetters({
+      name: "profile/name",
+      picture: "profile/picture",
+      isAuthenticated: "profile/isAuthenticated"
+    })
+  },
+  mounted() {
+    Hub.listen("auth", ({ payload: { event, data } }) => {
+      switch (event) {
+        case "signIn":
+          this.user = data;
+          break;
+        case "signOut":
+          this.user = null;
+          break;
+        case "customOAuthState":
+          this.setState({ customState: data });
+      }
+    Auth.currentAuthenticatedUser()
+      .then((user) => {
+        console.log(user)
+        this.$store.commit('profile/SET_USER', user)
+      })
+      .catch(() => console.log("Not signed in"));
+    });
   }
 }
 </script>

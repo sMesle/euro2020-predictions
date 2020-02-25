@@ -1,18 +1,20 @@
 {
     "dev": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-euro2020-predictions-dev-111648-authRole",
-            "UnauthRoleArn": "arn:aws:iam::212214056859:role/amplify-euro2020-predictions-dev-111648-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::212214056859:role/amplify-euro2020-predictions-dev-111648-authRole",
+            "AuthRoleName": "amplify-quasar-again-dev-164654-authRole",
+            "UnauthRoleArn": "arn:aws:iam::212214056859:role/amplify-quasar-again-dev-164654-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::212214056859:role/amplify-quasar-again-dev-164654-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-euro2020-predictions-dev-111648-deployment",
-            "UnauthRoleName": "amplify-euro2020-predictions-dev-111648-unauthRole",
-            "StackName": "amplify-euro2020-predictions-dev-111648",
-            "StackId": "arn:aws:cloudformation:us-east-1:212214056859:stack/amplify-euro2020-predictions-dev-111648/c93636c0-56ee-11ea-a25f-0acaf3694d17"
+            "DeploymentBucketName": "amplify-quasar-again-dev-164654-deployment",
+            "UnauthRoleName": "amplify-quasar-again-dev-164654-unauthRole",
+            "StackName": "amplify-quasar-again-dev-164654",
+            "StackId": "arn:aws:cloudformation:us-east-1:212214056859:stack/amplify-quasar-again-dev-164654/0cb19280-57e6-11ea-a022-0a0faac5843d"
         },
         "categories": {
             "auth": {
-                "euro2020predictionsb04f88e2": {}
+                "quasaragain28c034df": {
+                    "hostedUIProviderCreds": "[{\"ProviderName\":\"Google\",\"client_id\":\"757535294295-1otrh39810opb0cqiaa4peu6r4jiggp8.apps.googleusercontent.com\",\"client_secret\":\"YsOT2LCUJrOlcWPYtq06EFXP\"}]"
+                }
             }
         }
     }

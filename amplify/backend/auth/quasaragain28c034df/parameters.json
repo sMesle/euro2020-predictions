@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "euro2020predictionsb04f88e2_identitypool_b04f88e2",
+    "identityPoolName": "quasaragain28c034df_identitypool_28c034df",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "euro20b04f88e2",
-    "userPoolName": "euro2020predictionsb04f88e2_userpool_b04f88e2",
+    "resourceNameTruncated": "quasar28c034df",
+    "userPoolName": "quasaragain28c034df_userpool_28c034df",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,9 +28,9 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "euro20b04f88e2_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "quasar28c034df_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "resourceName": "euro2020predictionsb04f88e2",
+    "resourceName": "quasaragain28c034df",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -44,7 +44,14 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
+    "useDefault": "defaultSocial",
+    "hostedUI": true,
+    "hostedUIDomainName": "quasaragain28c034df-28c034df",
+    "authProvidersUserPool": [
+        "Google"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:8080/\"],\"LogoutURLs\":[\"http://localhost:8080/\"]}",
     "userPoolGroupList": [],
     "dependsOn": []
 }

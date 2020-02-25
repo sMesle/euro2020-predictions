@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"euro2020predictionsb04f88e2": {
+		"quasaragain28c034df": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [],
